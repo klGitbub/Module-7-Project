@@ -20,14 +20,14 @@ console.log(addToZero([1, 2, 3]));
 console.log(addToZero([1, 2, 3, -2]));
 // -> True
 
+// Time Complexity: O(n^2)
+
 function hasUniqueChars(str) {
-    let unique = "";
+    let unique = new Set([]);
     for (let i = 0; i < str.length; i++) {
-        if(unique.includes(str[i]) === false){
-            return true;
-        }
+        unique.add(str[i])
     }
-    return false;
+    return unique.size === str.length;
 }
 console.log(hasUniqueChars("Monday"));
 // -> True
@@ -35,9 +35,12 @@ console.log(hasUniqueChars("Monday"));
 console.log(hasUniqueChars("Moonday"));
 // -> False
 
+// Time Complexity: O(n)
+
+
+
 function isPangram(str) {
     str = str.toLowerCase();
-    const { length } = str;
     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
     const alphaArray = alphabet.split('');
     for (let i = 0; i < str.length; i++){
@@ -55,6 +58,8 @@ console.log(isPangram("The quick brown fox jumps over the lazy dog!"));
 console.log(isPangram("I like cats, but not mice"));
 // -> False
 
+// Time Complexity: O(n)
+
 function findLongestWord(arr) {
     let word = "";
     for (let i = 0; i < arr.length; i++) {
@@ -67,3 +72,5 @@ function findLongestWord(arr) {
 
 console.log(findLongestWord(["hi", "hello"]));
 // -> 5
+
+// Time Complexity: O(n)
