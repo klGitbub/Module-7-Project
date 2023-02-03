@@ -1,0 +1,19 @@
+Results for the extraLargeArray
+insert 293.1406 ms
+append 2.0783 ms
+
+Results for the tinyArray
+insert 21.2 μs
+append 63.1 μs
+
+Results for the smallArray
+insert 32.4 μs
+append 525.2 μs
+
+Results for the mediumArray
+insert 108.7 μs
+append 100.6 μs
+
+Results for the largeArray
+insert 2.6359 ms
+append 476.4 μs
